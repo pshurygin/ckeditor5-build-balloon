@@ -1,0 +1,13 @@
+name: build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/npm@master
+    - name: npm install
+      run: npm install
+    - name: build
+      run: npm run build
